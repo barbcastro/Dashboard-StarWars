@@ -6,6 +6,9 @@ Esse projeto foi desenvolvido com a intenção de praticar requisição de API's
 
 
 ## Layout
+Você pode acessar o projeto clicando <a href="https://github.com/barbcastro/Dashboard-StarWars" target="_blank">aqui</a>
+
+
 <img src="/assets/dashbord-star-wars.gif">
 
 ## API's externos usados
