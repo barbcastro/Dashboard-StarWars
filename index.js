@@ -4,7 +4,8 @@ const planetasContador = document.getElementById('planetas');
 const navesContador = document.getElementById('naves');
 
 
-personagensContador();
+preencherContadores();
+preencherTabela();
 
 function preencherContadores() {
     Promise.all([
@@ -19,6 +20,20 @@ function preencherContadores() {
                 planetasContador.innerHTML = results[2].data.count;
                 navesContador.innerHTML = results[3].data.count;
     });     
+}
+
+async function preencherTabela() {
+    const response = await swapiGet("films/");
+    const tableData = response.data.results;
+    console.log(tableData);
+    tableData.forEach(function (_Film) {
+        $("#filmTable").append(`<tr>
+        <td>${_Film.title}</td>
+        <td>${moment(_Film.release_date).format('DD/MM/YYYY')}</td>
+        <td>${_Film.director}</td>
+        <td>${_Film.episode_id}</td>    
+        </tr>`);
+    });
 }
 
 function swapiGet(param) {
