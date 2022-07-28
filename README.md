@@ -2,6 +2,7 @@
 
 ## Sobre
 Esse projeto foi desenvolvido com a intenção de praticar requisição de API's externas.
+</br>
 Usado HTML, CSS e JavaScipt.
 
 
